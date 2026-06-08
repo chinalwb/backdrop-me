@@ -19,13 +19,13 @@
 <p class="muted">Effective date: June 7, 2026</p>
 
 <p>Backdrop Me is a wallpaper maker. Your wallpapers are created on your device and stay
-there. This page explains the one kind of data the app does send: anonymous usage
-analytics.</p>
+there. With your consent, the app sends anonymous usage analytics to help us improve it.
+You choose this on first launch, and you can change it anytime in the app's About screen.</p>
 
 <h2>What we collect</h2>
-<p>Backdrop Me uses <a href="https://mixpanel.com">Mixpanel</a>, an analytics service, to
-understand which features are used so we can improve the app. The following is sent to
-Mixpanel:</p>
+<p>If you turn analytics on, Backdrop Me uses <a href="https://mixpanel.com">Mixpanel</a>, an
+analytics service, to understand which features are used so we can improve the app. The
+following is sent to Mixpanel:</p>
 <ul>
   <li><strong>Anonymous identifier</strong> — a random ID generated for your device by
       the analytics library. It is not your name, email, phone number, or any account —
@@ -33,10 +33,11 @@ Mixpanel:</p>
   <li><strong>Usage events</strong> — e.g. app opened, a gradient preset selected,
       colors adjusted, a quote chosen, a font selected, image saved, wallpaper set,
       image shared.</li>
-  <li><strong>Caption text you write</strong> — when you type your own words onto a
-      wallpaper, that text is included in the corresponding analytics event. We collect
-      it to understand how people use the text feature. Don't write anything on a
-      wallpaper that you wouldn't want us to see.</li>
+  <li><strong>Caption text you write</strong> — only if you separately opt in (a checkbox on
+      the first-launch notice, or a toggle in About; off by default). When it is on, the words
+      you type onto a wallpaper are included in the analytics event. When it is off, we still
+      record that you wrote your own words — their length and script (for example Latin or
+      Chinese) — but never the words themselves.</li>
   <li><strong>Device context</strong> — device model, operating system version, app
       version, and similar technical properties attached automatically by the analytics
       library. Your IP address is processed on receipt and may yield an approximate
@@ -80,20 +81,22 @@ updated effective date.</p>
 <p class="muted" lang="zh-CN">生效日期：2026 年 6 月 7 日</p>
 
 <div lang="zh-CN">
-<p>Backdrop Me 是一款壁纸制作应用。你的壁纸在你的设备上生成并保存在本地。本页说明应用
-唯一会发送的数据：匿名使用统计。</p>
+<p>Backdrop Me 是一款壁纸制作应用。你的壁纸在你的设备上生成并保存在本地。在你同意后，
+应用会发送匿名使用统计以帮助我们改进。你在首次启动时选择是否开启，也可以随时在应用的
+「关于」页面更改。</p>
 
 <h2>我们收集什么</h2>
-<p>Backdrop Me 使用 <a href="https://mixpanel.com">Mixpanel</a> 分析服务来了解各功能的
-使用情况，以便改进应用。发送给 Mixpanel 的内容包括：</p>
+<p>若你开启统计，Backdrop Me 会使用 <a href="https://mixpanel.com">Mixpanel</a> 分析服务来
+了解各功能的使用情况，以便改进应用。发送给 Mixpanel 的内容包括：</p>
 <ul>
   <li><strong>匿名标识符</strong> —— 由分析库为你的设备生成的随机 ID。它不是你的姓名、
       邮箱、手机号或任何账号 —— Backdrop Me 没有账号体系，也从不询问你的身份。</li>
   <li><strong>使用事件</strong> —— 例如：打开应用、选择渐变预设、调整颜色、选用语录、
       选择字体、保存图片、设置壁纸、分享图片。</li>
-  <li><strong>你输入的文字</strong> —— 当你在壁纸上输入自己的文字时，该文字会随对应的
-      统计事件一并发送。我们以此了解文字功能的使用方式。请不要在壁纸上写下你不希望
-      我们看到的内容。</li>
+  <li><strong>你输入的文字</strong> —— 仅在你单独选择开启时（首次启动提示中的勾选项，或
+      「关于」中的开关；默认关闭）。开启后，你写在壁纸上的文字会随对应的统计事件一并发送。
+      关闭时，我们仍会记录你写下了自己的文字——其长度与文种（例如拉丁文或中文）——但不会
+      记录文字内容本身。</li>
   <li><strong>设备信息</strong> —— 设备型号、系统版本、应用版本等由分析库自动附带的
       技术属性。你的 IP 地址在接收时会被处理，可能得出大致（城市级）位置；我们不收集
       精确位置。</li>
