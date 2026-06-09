@@ -1,4 +1,417 @@
-<!DOCTYPE html><html><head><meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=privacy-policy.html">
-<title>Backdrop Me</title></head>
-<body><a href="privacy-policy.html">Backdrop Me Privacy Policy</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backdrop Me — Make wallpapers that say something</title>
+<meta name="description" content="Backdrop Me turns two colors and a sentence into a wallpaper rendered at your phone's exact resolution. Pick a gradient, add your own words, set the mood — then save, share, or set it. Free, no ads, no account.">
+<meta name="theme-color" content="#1f2da3">
+<link rel="icon" href="assets/icon.png">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Backdrop Me — Make wallpapers that say something">
+<meta property="og:description" content="Two colors and a sentence become a wallpaper at your phone's exact resolution. Free, no ads, no account.">
+<meta property="og:url" content="https://chinalwb.github.io/backdrop-legal/">
+<meta property="og:image" content="https://chinalwb.github.io/backdrop-legal/assets/shots/lockscreen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{
+    --brand:#1f2da3; --brand-d:#16207a; --brand-l:#3a48d8;
+    --ink:#191a22; --muted:#62636e; --bg:#f5f6fa; --card:#ffffff; --line:#e8e8f0;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; color:var(--ink); background:var(--bg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  a{color:var(--brand); text-decoration:none}
+  img{max-width:100%; display:block}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+
+  /* ---- bilingual toggle: only one .t[lang] of each pair is shown ---- */
+  html:not(.zh) .t[lang="zh"]{display:none}
+  html.zh      .t[lang="en"]{display:none}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex; align-items:center; gap:.5em; font-weight:600; font-size:1rem;
+       padding:.8em 1.4em; border-radius:999px; border:1px solid transparent; cursor:pointer;
+       transition:transform .12s ease, box-shadow .12s ease, background .12s ease; white-space:nowrap}
+  .btn:active{transform:translateY(1px)}
+  .btn-store{background:var(--brand); color:#fff; box-shadow:0 10px 24px -8px rgba(31,45,163,.6)}
+  .btn-store:hover{background:var(--brand-d); box-shadow:0 14px 30px -8px rgba(31,45,163,.7)}
+  .btn-ghost{background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.5); backdrop-filter:blur(4px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.22)}
+  .btn .ico{width:20px;height:20px;flex:0 0 auto}
+
+  /* ---------- nav ---------- */
+  header.nav{position:fixed; top:0; left:0; right:0; z-index:50; transition:background .25s ease, box-shadow .25s ease, color .25s}
+  header.nav .row{display:flex; align-items:center; gap:16px; padding:14px 22px; max-width:var(--maxw); margin:0 auto}
+  header.nav .brand{display:flex; align-items:center; gap:10px; font-weight:700; color:#fff; font-size:1.05rem}
+  header.nav .brand img{width:30px; height:30px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  header.nav .links{display:flex; gap:22px; margin-left:18px}
+  header.nav .links a{color:rgba(255,255,255,.86); font-weight:500; font-size:.95rem}
+  header.nav .links a:hover{color:#fff}
+  header.nav .actions{margin-left:auto; display:flex; align-items:center; gap:12px}
+  .langbtn{background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.4);
+           border-radius:999px; padding:.42em .9em; font-size:.85rem; font-weight:600; cursor:pointer;
+           font-family:inherit; transition:background .15s}
+  .langbtn:hover{background:rgba(255,255,255,.26)}
+  header.nav .btn-store{padding:.55em 1.1em; font-size:.92rem}
+  /* scrolled state -> solid white nav */
+  header.nav.scrolled{background:rgba(255,255,255,.86); backdrop-filter:saturate(180%) blur(14px); box-shadow:0 1px 0 var(--line)}
+  header.nav.scrolled .brand{color:var(--ink)}
+  header.nav.scrolled .links a{color:var(--muted)}
+  header.nav.scrolled .links a:hover{color:var(--ink)}
+  header.nav.scrolled .langbtn{background:#eef0f6; color:var(--brand); border-color:#dfe2ee}
+  @media(max-width:760px){ header.nav .links{display:none} }
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; overflow:hidden; color:#fff; padding:132px 0 90px;
+    background:
+      radial-gradient(60% 50% at 10% 6%, rgba(56,201,224,.55), transparent 60%),
+      radial-gradient(55% 45% at 92% 16%, rgba(232,74,138,.55), transparent 62%),
+      radial-gradient(70% 60% at 78% 100%, rgba(124,72,206,.5), transparent 60%),
+      linear-gradient(158deg,#191c54 0%, #3a2a78 50%, #5a2c74 100%);
+  }
+  .hero .grid{display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center}
+  .eyebrow{display:inline-flex; align-items:center; gap:.5em; font-size:.82rem; font-weight:600; letter-spacing:.04em;
+    text-transform:uppercase; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.3);
+    padding:.4em .9em; border-radius:999px; margin-bottom:22px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#5ee08a;box-shadow:0 0 0 4px rgba(94,224,138,.3)}
+  .hero h1{font-size:clamp(2.2rem,5.2vw,3.5rem); line-height:1.08; margin:0 0 18px; font-weight:800; letter-spacing:-.01em}
+  .hero p.sub{font-size:clamp(1.05rem,1.6vw,1.22rem); color:rgba(255,255,255,.9); margin:0 0 30px; max-width:34ch}
+  .hero .cta{display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+  .hero .fineprint{margin-top:18px; font-size:.9rem; color:rgba(255,255,255,.75)}
+  .hero .fineprint b{color:#fff; font-weight:600}
+
+  /* device frames */
+  .phones{position:relative; display:flex; justify-content:center; align-items:flex-end; min-height:420px}
+  .device{position:relative; border-radius:34px; background:#0b0b12; padding:7px;
+    box-shadow:0 36px 70px -22px rgba(10,10,40,.6), 0 10px 24px rgba(0,0,0,.22)}
+  .device::after{content:""; position:absolute; top:13px; left:50%; transform:translateX(-50%);
+    width:54px; height:5px; border-radius:3px; background:rgba(255,255,255,.22)}
+  .device img{border-radius:27px; width:100%; height:100%; object-fit:cover; aspect-ratio:1440/3040}
+  .phones .main{width:248px; z-index:2}
+  .phones .behind{width:212px; position:absolute; left:6%; bottom:34px; transform:rotate(-7deg); opacity:.96; z-index:1}
+  @media(max-width:880px){
+    .hero .grid{grid-template-columns:1fr; text-align:center}
+    .hero p.sub{margin-left:auto;margin-right:auto}
+    .hero .cta{justify-content:center}
+    .hero .eyebrow{margin-top:0}
+    .phones{margin-top:24px;min-height:0}
+    .phones .behind{display:none}
+    .phones .main{width:230px}
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:84px 0}
+  .sec-head{text-align:center; max-width:46ch; margin:0 auto 52px}
+  .sec-head .kicker{color:var(--brand); font-weight:700; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase}
+  .sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem); margin:.3em 0 .35em; font-weight:800; letter-spacing:-.01em}
+  .sec-head p{color:var(--muted); font-size:1.1rem; margin:0}
+
+  /* steps */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:22px}
+  .step{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:26px 22px}
+  .step .n{display:inline-flex; align-items:center; justify-content:center; width:34px;height:34px; border-radius:10px;
+    background:linear-gradient(135deg,var(--brand),var(--brand-l)); color:#fff; font-weight:700; margin-bottom:14px}
+  .step h3{margin:0 0 6px; font-size:1.12rem}
+  .step p{margin:0; color:var(--muted); font-size:.97rem}
+  @media(max-width:860px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.steps{grid-template-columns:1fr}}
+
+  /* gallery */
+  .gallery{background:#0e1130; color:#fff}
+  .gallery .sec-head h2{color:#fff}
+  .gallery .sec-head .kicker{color:#8ea0ff}
+  .gallery .sec-head p{color:rgba(255,255,255,.72)}
+  .shots{display:flex; gap:22px; overflow-x:auto; padding:6px 4px 22px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch}
+  .shots .device{flex:0 0 auto; width:212px; scroll-snap-align:center; background:#05060f}
+  .shots figcaption{margin-top:14px; text-align:center; font-size:.92rem; color:rgba(255,255,255,.8); font-weight:500}
+  .shots figure{margin:0}
+  .shots::-webkit-scrollbar{height:8px}
+  .shots::-webkit-scrollbar-thumb{background:rgba(255,255,255,.18); border-radius:8px}
+
+  /* features */
+  .features{display:grid; grid-template-columns:repeat(4,1fr); gap:20px}
+  .feature{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px 20px}
+  .feature .ico{width:30px;height:30px;color:var(--brand); margin-bottom:14px}
+  .feature h3{margin:0 0 6px; font-size:1.05rem}
+  .feature p{margin:0; color:var(--muted); font-size:.95rem}
+  @media(max-width:920px){.features{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.features{grid-template-columns:1fr}}
+
+  /* privacy strip */
+  .privacy{background:linear-gradient(135deg,#eef0fb,#f6f1f8)}
+  .privacy .box{display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center;
+    background:var(--card); border:1px solid var(--line); border-radius:22px; padding:34px 32px;
+    box-shadow:0 20px 50px -30px rgba(31,45,163,.4)}
+  .privacy .shield{width:56px;height:56px;color:var(--brand); flex:0 0 auto}
+  .privacy h2{margin:0 0 8px; font-size:1.5rem}
+  .privacy p{margin:0 0 12px; color:var(--muted)}
+  @media(max-width:560px){.privacy .box{grid-template-columns:1fr; text-align:center; justify-items:center}}
+
+  /* final cta */
+  .final{text-align:center; color:#fff; position:relative; overflow:hidden;
+    background:radial-gradient(60% 80% at 50% -10%, rgba(124,72,206,.6), transparent 60%),
+      linear-gradient(135deg,#1b1f5e,#3a2a78);}
+  .final h2{font-size:clamp(1.8rem,3.6vw,2.6rem); margin:0 0 14px; font-weight:800}
+  .final p{color:rgba(255,255,255,.85); margin:0 0 28px; font-size:1.1rem}
+  .final .req{margin-top:18px; font-size:.9rem; color:rgba(255,255,255,.65)}
+  .final .btn-store{background:#fff; color:var(--brand)}
+  .final .btn-store:hover{background:#eef0ff}
+
+  /* footer */
+  footer{background:#0b0c1a; color:rgba(255,255,255,.7); padding:46px 0}
+  footer .row{display:flex; flex-wrap:wrap; gap:18px 28px; align-items:center; justify-content:space-between}
+  footer .brand{display:flex; align-items:center; gap:10px; color:#fff; font-weight:700}
+  footer .brand img{width:26px;height:26px;border-radius:7px}
+  footer nav{display:flex; flex-wrap:wrap; gap:20px}
+  footer a{color:rgba(255,255,255,.78)}
+  footer a:hover{color:#fff}
+  footer .copy{width:100%; margin-top:8px; font-size:.85rem; color:rgba(255,255,255,.5)}
+</style>
+</head>
+<body id="top">
+
+<!-- set language before paint to avoid flash -->
+<script>
+  (function(){
+    var s=localStorage.getItem('bm_lang');
+    var l=s||((navigator.language||'').toLowerCase().slice(0,2)==='zh'?'zh':'en');
+    var d=document.documentElement;
+    if(l==='zh'){d.classList.add('zh');} d.lang=l;
+  })();
+</script>
+
+<header class="nav" id="nav">
+  <div class="row">
+    <a class="brand" href="#top"><img src="assets/icon.png" alt="Backdrop Me"><span>Backdrop Me</span></a>
+    <nav class="links">
+      <a href="#how"><span class="t" lang="en">How it works</span><span class="t" lang="zh">玩法</span></a>
+      <a href="#features"><span class="t" lang="en">Features</span><span class="t" lang="zh">功能</span></a>
+      <a href="#privacy"><span class="t" lang="en">Privacy</span><span class="t" lang="zh">隐私</span></a>
+    </nav>
+    <div class="actions">
+      <button class="langbtn" onclick="toggleLang()" aria-label="Switch language">
+        <span class="t" lang="en">中文</span><span class="t" lang="zh">English</span>
+      </button>
+      <a class="btn btn-store" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop">
+        <span class="t" lang="en">Get it</span><span class="t" lang="zh">下载</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>
+        <span class="t" lang="en">Now on the Galaxy Store</span><span class="t" lang="zh">已上架 Galaxy Store</span>
+      </span>
+      <h1>
+        <span class="t" lang="en">Make wallpapers that say something.</span>
+        <span class="t" lang="zh">做一张会说话的壁纸。</span>
+      </h1>
+      <p class="sub">
+        <span class="t" lang="en">Pick two colors, add a line in your own words, and Backdrop Me renders it at your phone's exact resolution — so it fits your screen perfectly.</span>
+        <span class="t" lang="zh">选两种颜色，写上一句属于你的话，Backdrop Me 会按你手机的真实分辨率渲染——完美贴合你的屏幕。</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-store" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1.2 6.1 5 3.4a.6.6 0 0 1 0 1l-5 3.4a.6.6 0 0 1-.94-.5V8.6a.6.6 0 0 1 .94-.5Z"/></svg>
+          <span class="t" lang="en">Get it on Galaxy Store</span><span class="t" lang="zh">前往 Galaxy Store 下载</span>
+        </a>
+        <a class="btn btn-ghost" href="#how">
+          <span class="t" lang="en">See how it works</span><span class="t" lang="zh">看看怎么玩</span>
+        </a>
+      </div>
+      <p class="fineprint">
+        <span class="t" lang="en"><b>Free.</b> No ads · No account · Android 10+</span>
+        <span class="t" lang="zh"><b>免费。</b>无广告 · 无需账号 · Android 10+</span>
+      </p>
+    </div>
+    <div class="phones">
+      <div class="device behind"><img src="assets/shots/welcome.jpg" alt="Backdrop Me welcome screen with a daily quote"></div>
+      <div class="device main"><img src="assets/shots/lockscreen.jpg" alt="A Backdrop Me wallpaper on a phone lock screen"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span class="t" lang="en">A guided editor</span><span class="t" lang="zh">引导式编辑器</span></span>
+      <h2><span class="t" lang="en">One step at a time.</span><span class="t" lang="zh">循序渐进，一步一选。</span></h2>
+      <p>
+        <span class="t" lang="en">Background, words, font, date, mood — Backdrop Me walks you through one choice at a time. No clutter, no learning curve.</span>
+        <span class="t" lang="zh">背景、文字、字体、日期、氛围——Backdrop Me 一次只让你做一个选择。没有杂乱，也没有学习成本。</span>
+      </p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3><span class="t" lang="en">Pick a gradient</span><span class="t" lang="zh">选一个渐变</span></h3>
+        <p><span class="t" lang="en">Start from a curated preset, or tune both colors and the direction yourself.</span><span class="t" lang="zh">从精选预设开始，或自由调整两端颜色与方向。</span></p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3><span class="t" lang="en">Add your words</span><span class="t" lang="zh">写上你的话</span></h3>
+        <p><span class="t" lang="en">Type your own line or tap a quote. Drag to place, pinch to resize, twist to rotate.</span><span class="t" lang="zh">输入自己的文字，或选一句语录。拖动摆放、双指缩放、旋转角度。</span></p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3><span class="t" lang="en">Set the mood</span><span class="t" lang="zh">调出氛围</span></h3>
+        <p><span class="t" lang="en">Choose from 14 fonts, add a date sticker, and dress it with film-style finishes.</span><span class="t" lang="zh">从 14 款字体中挑选，加上日期贴纸，再叠加电影感滤镜。</span></p>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <h3><span class="t" lang="en">Make it yours</span><span class="t" lang="zh">据为己有</span></h3>
+        <p><span class="t" lang="en">Set it as your home or lock screen, save a copy, or share — in one tap.</span><span class="t" lang="zh">一键设为主屏或锁屏、保存副本，或分享出去。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span class="t" lang="en">Take a look</span><span class="t" lang="zh">看看实际效果</span></span>
+      <h2><span class="t" lang="en">Every choice, beautifully simple.</span><span class="t" lang="zh">每一步，都简单好看。</span></h2>
+      <p><span class="t" lang="en">Curated presets, a dozen-plus fonts, date stickers with lunar support, and film-style finishes.</span><span class="t" lang="zh">精选预设、十余款字体、支持农历的日期贴纸，以及电影感滤镜。</span></p>
+    </div>
+    <div class="shots">
+      <figure class="device-fig"><div class="device"><img src="assets/shots/presets.jpg" alt="Gradient presets" loading="lazy"></div>
+        <figcaption><span class="t" lang="en">Gradient presets</span><span class="t" lang="zh">渐变预设</span></figcaption></figure>
+      <figure class="device-fig"><div class="device"><img src="assets/shots/fonts.jpg" alt="Font picker" loading="lazy"></div>
+        <figcaption><span class="t" lang="en">14 fonts</span><span class="t" lang="zh">14 款字体</span></figcaption></figure>
+      <figure class="device-fig"><div class="device"><img src="assets/shots/date.jpg" alt="Date stickers" loading="lazy"></div>
+        <figcaption><span class="t" lang="en">Date stickers</span><span class="t" lang="zh">日期贴纸</span></figcaption></figure>
+      <figure class="device-fig"><div class="device"><img src="assets/shots/finishes.jpg" alt="Film-style finishes" loading="lazy"></div>
+        <figcaption><span class="t" lang="en">Film finishes</span><span class="t" lang="zh">电影感滤镜</span></figcaption></figure>
+      <figure class="device-fig"><div class="device"><img src="assets/shots/preview.jpg" alt="Full-screen preview" loading="lazy"></div>
+        <figcaption><span class="t" lang="en">Full preview</span><span class="t" lang="zh">全屏预览</span></figcaption></figure>
+      <figure class="device-fig"><div class="device"><img src="assets/shots/apply.jpg" alt="Set as home or lock screen" loading="lazy"></div>
+        <figcaption><span class="t" lang="en">One-tap apply</span><span class="t" lang="zh">一键应用</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span class="t" lang="en">Features</span><span class="t" lang="zh">功能</span></span>
+      <h2><span class="t" lang="en">Small app. Lots of care.</span><span class="t" lang="zh">小而精，处处用心。</span></h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 14 14 3M9 21 21 9"/></svg>
+        <h3><span class="t" lang="en">Two-color gradients</span><span class="t" lang="zh">双色渐变</span></h3>
+        <p><span class="t" lang="en">Smooth blends with adjustable direction — vertical, horizontal, or diagonal.</span><span class="t" lang="zh">平滑过渡，方向可调——纵向、横向或对角线。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg>
+        <h3><span class="t" lang="en">Words, beautifully set</span><span class="t" lang="zh">认真对待文字</span></h3>
+        <p><span class="t" lang="en">14 hand-picked fonts, including 3 for Chinese. Any size, any color, bold or italic.</span><span class="t" lang="zh">14 款精选字体，含 3 款中文字体。任意大小与颜色，可加粗或斜体。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18M12 3l-3 3m3-3 3 3M12 21l-3-3m3 3 3-3M3 12l3-3m-3 3 3 3M21 12l-3-3m3 3-3 3"/></svg>
+        <h3><span class="t" lang="en">Place it precisely</span><span class="t" lang="zh">随心摆放</span></h3>
+        <p><span class="t" lang="en">Draggable caption text — pinch to resize, twist to rotate, drop it anywhere.</span><span class="t" lang="zh">文字可拖动——双指缩放、旋转角度，放在任何位置。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+        <h3><span class="t" lang="en">Date stickers</span><span class="t" lang="zh">日期贴纸</span></h3>
+        <p><span class="t" lang="en">A tasteful date stamp in several styles, with lunar-calendar support in Chinese.</span><span class="t" lang="zh">多种样式的精致日期贴，中文支持农历。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3L12 3Z"/><path d="M18 14l.9 2.3L21 17l-2.1.7L18 20l-.9-2.3L15 17l2.1-.7L18 14Z"/></svg>
+        <h3><span class="t" lang="en">Film-style finishes</span><span class="t" lang="zh">电影感滤镜</span></h3>
+        <p><span class="t" lang="en">Optional grain, vignette, light leak, scanlines, and halftone.</span><span class="t" lang="zh">可选颗粒、暗角、漏光、扫描线与半调。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7"/><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/></svg>
+        <h3><span class="t" lang="en">Curated presets</span><span class="t" lang="zh">精选预设</span></h3>
+        <p><span class="t" lang="en">Gradient palettes and quotes — movie &amp; book lines, Chinese classics. "Surprise me" for instant inspiration.</span><span class="t" lang="zh">渐变配色与语录——电影台词、书摘、中文经典。「随机一下」即刻获得灵感。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+        <h3><span class="t" lang="en">Pixel-perfect output</span><span class="t" lang="zh">像素级输出</span></h3>
+        <p><span class="t" lang="en">Rendered at your device's true resolution — never stretched, never cropped.</span><span class="t" lang="zh">按设备真实分辨率渲染——不拉伸、不裁切。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
+        <h3><span class="t" lang="en">Private by design</span><span class="t" lang="zh">默认尊重隐私</span></h3>
+        <p><span class="t" lang="en">No account, no sign-in, no ads. Everything is created on your phone.</span><span class="t" lang="zh">无账号、无登录、无广告。一切都在你的手机上完成。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRIVACY ================= -->
+<section class="privacy" id="privacy">
+  <div class="wrap">
+    <div class="box">
+      <svg class="shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9.3 12l1.9 1.9L15 9.8"/></svg>
+      <div>
+        <h2><span class="t" lang="en">Yours, and only yours.</span><span class="t" lang="zh">只属于你。</span></h2>
+        <p>
+          <span class="t" lang="en">Backdrop Me has no accounts and asks nothing about who you are. Your wallpapers are made on your device and saved to your own gallery. With your consent, the app sends anonymous usage analytics to help improve it — you can turn it off anytime.</span>
+          <span class="t" lang="zh">Backdrop Me 没有账号体系，也从不询问你的身份。你的壁纸在设备上生成，保存在你自己的相册。在你同意后，应用会发送匿名使用统计以帮助改进——你可以随时关闭。</span>
+        </p>
+        <a href="privacy-policy.html">
+          <span class="t" lang="en">Read the privacy policy →</span><span class="t" lang="zh">阅读隐私政策 →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final">
+  <div class="wrap">
+    <h2><span class="t" lang="en">Make a wallpaper that says something. Yours.</span><span class="t" lang="zh">做一张会说话的壁纸。属于你的那张。</span></h2>
+    <p><span class="t" lang="en">Free on the Galaxy Store. English &amp; 简体中文.</span><span class="t" lang="zh">Galaxy Store 免费下载。支持 English &amp; 简体中文。</span></p>
+    <a class="btn btn-store" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1.2 6.1 5 3.4a.6.6 0 0 1 0 1l-5 3.4a.6.6 0 0 1-.94-.5V8.6a.6.6 0 0 1 .94-.5Z"/></svg>
+      <span class="t" lang="en">Get it on Galaxy Store</span><span class="t" lang="zh">前往 Galaxy Store 下载</span>
+    </a>
+    <p class="req"><span class="t" lang="en">Requires Android 10 (API 29) or later.</span><span class="t" lang="zh">需要 Android 10（API 29）及以上。</span></p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap row">
+    <div class="brand"><img src="assets/icon.png" alt="">Backdrop Me</div>
+    <nav>
+      <a href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop">Galaxy Store</a>
+      <a href="privacy-policy.html"><span class="t" lang="en">Privacy Policy</span><span class="t" lang="zh">隐私政策</span></a>
+      <a href="mailto:chinalwb168@gmail.com"><span class="t" lang="en">Support</span><span class="t" lang="zh">支持</span></a>
+    </nav>
+    <div class="copy">© 2026 Wenbin Liu · Backdrop Me</div>
+  </div>
+</footer>
+
+<script>
+  function toggleLang(){
+    var d=document.documentElement, zh=d.classList.toggle('zh');
+    d.lang=zh?'zh':'en';
+    localStorage.setItem('bm_lang', zh?'zh':'en');
+  }
+  // nav turns solid on scroll
+  var nav=document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>30); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+</script>
+</body>
+</html>
