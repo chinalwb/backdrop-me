@@ -48,6 +48,13 @@
   .btn-ghost:hover{background:rgba(255,255,255,.22)}
   .btn .ico{width:20px;height:20px;flex:0 0 auto}
 
+  /* official Galaxy Store badges */
+  .badge{display:inline-flex; transition:transform .12s ease, filter .12s ease; line-height:0}
+  .badge img{height:54px; width:auto; display:block}
+  .badge:hover{transform:translateY(-2px); filter:brightness(1.04)}
+  .badge:active{transform:translateY(0)}
+  @media(max-width:480px){ .badge img{height:48px} }
+
   /* ---------- nav ---------- */
   header.nav{position:fixed; top:0; left:0; right:0; z-index:50; transition:background .25s ease, box-shadow .25s ease, color .25s}
   header.nav .row{display:flex; align-items:center; gap:16px; padding:14px 22px; max-width:var(--maxw); margin:0 auto}
@@ -224,10 +231,10 @@
         <span class="t" lang="zh">选两种颜色，写上一句属于你的话，Backdrop Me 会按你手机的真实分辨率渲染——完美贴合你的屏幕。</span>
       </p>
       <div class="cta">
-        <a class="btn btn-store" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop">
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1.2 6.1 5 3.4a.6.6 0 0 1 0 1l-5 3.4a.6.6 0 0 1-.94-.5V8.6a.6.6 0 0 1 .94-.5Z"/></svg>
-          <span class="t" lang="en">Get it on Galaxy Store</span><span class="t" lang="zh">前往 Galaxy Store 下载</span>
-        </a>
+        <a class="badge t" lang="en" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop" aria-label="Available on Galaxy Store">
+          <img src="assets/badges/galaxy_white_en.png" alt="Available on Galaxy Store"></a>
+        <a class="badge t" lang="zh" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop" aria-label="可下载自三星应用商店">
+          <img src="assets/badges/galaxy_white_zh.png" alt="可下载自三星应用商店"></a>
         <a class="btn btn-ghost" href="#how">
           <span class="t" lang="en">See how it works</span><span class="t" lang="zh">看看怎么玩</span>
         </a>
@@ -381,10 +388,10 @@
   <div class="wrap">
     <h2><span class="t" lang="en">Make a wallpaper that says something. Yours.</span><span class="t" lang="zh">做一张会说话的壁纸。属于你的那张。</span></h2>
     <p><span class="t" lang="en">Free on the Galaxy Store. English &amp; 简体中文.</span><span class="t" lang="zh">Galaxy Store 免费下载。支持 English &amp; 简体中文。</span></p>
-    <a class="btn btn-store" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop">
-      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1.2 6.1 5 3.4a.6.6 0 0 1 0 1l-5 3.4a.6.6 0 0 1-.94-.5V8.6a.6.6 0 0 1 .94-.5Z"/></svg>
-      <span class="t" lang="en">Get it on Galaxy Store</span><span class="t" lang="zh">前往 Galaxy Store 下载</span>
-    </a>
+    <a class="badge t" lang="en" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop" aria-label="Available on Galaxy Store" style="justify-content:center">
+      <img src="assets/badges/galaxy_white_en.png" alt="Available on Galaxy Store"></a>
+    <a class="badge t" lang="zh" href="https://galaxystore.samsung.com/detail/com.chinalwb.backdrop" aria-label="可下载自三星应用商店" style="justify-content:center">
+      <img src="assets/badges/galaxy_white_zh.png" alt="可下载自三星应用商店"></a>
     <p class="req"><span class="t" lang="en">Requires Android 10 (API 29) or later.</span><span class="t" lang="zh">需要 Android 10（API 29）及以上。</span></p>
   </div>
 </section>
