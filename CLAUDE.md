@@ -30,7 +30,7 @@ CSS hides the inactive language (`html.zh` class on the root element toggles it)
 
 ## Download links appear in multiple places
 
-The Galaxy Store URL (`https://galaxystore.samsung.com/detail/com.chinalwb.backdrop`) and the direct-APK link (`https://github.com/chinalwb/backdrop-me/releases/download/v1.0/BackdropMe.apk`) each appear several times across `index.html` (nav button, hero CTA, final CTA, footer). When updating a release version or URL, update every occurrence.
+The Galaxy Store URL (`https://galaxystore.samsung.com/detail/com.chinalwb.backdrop`) and the direct-APK link (`https://github.com/chinalwb/backdrop-me/releases/latest/download/BackdropMe.apk`) each appear several times across `index.html` (nav button, hero CTA, final CTA, footer). The APK link uses `releases/latest`, so publishing a new GitHub release with an asset named exactly `BackdropMe.apk` updates all download buttons automatically — no site edits needed. If either URL ever changes shape, update every occurrence.
 
 ## Privacy policy accuracy
 
