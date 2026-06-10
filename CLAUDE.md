@@ -14,6 +14,8 @@ Static marketing + legal site for **Backdrop Me**, an Android wallpaper-maker ap
 
 Published via **GitHub Pages** at `https://chinalwb.github.io/backdrop-me/`. Pushing to `main` deploys the site — there is no staging environment. Preview locally by opening the file directly or `python3 -m http.server`.
 
+This repo was renamed from `backdrop-legal` in June 2026. A separate stub repo, `chinalwb/backdrop-legal`, exists solely to redirect the old Pages URLs (the privacy policy URL registered with the Galaxy Store listing pointed there). Do not delete or repurpose that repo.
+
 ## Bilingual content — the key convention
 
 Every user-facing string on `index.html` exists twice, wrapped in paired spans:
