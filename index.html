@@ -56,12 +56,13 @@
   @media(max-width:480px){ .badge img{height:48px} }
 
   /* iOS coming-soon chip (on dark sections) */
-  .ios-soon{display:inline-flex; align-items:center; gap:.45em; background:rgba(255,255,255,.1);
+  .ios-soon{display:inline-flex; align-items:center; gap:.55em; background:rgba(255,255,255,.1);
     color:rgba(255,255,255,.85); border:1px dashed rgba(255,255,255,.4); border-radius:999px;
-    padding:.55em 1.1em; font-size:.9rem; font-weight:600; cursor:pointer; font-family:inherit;
+    height:54px; padding:0 1.5em; font-size:1rem; font-weight:600; cursor:pointer; font-family:inherit;
     transition:background .15s, color .15s, border-color .15s}
   .ios-soon:hover{background:rgba(255,255,255,.2); color:#fff}
-  .ios-soon svg{width:16px; height:16px; flex:0 0 auto}
+  .ios-soon svg{width:20px; height:20px; flex:0 0 auto}
+  @media(max-width:480px){ .ios-soon{height:48px; font-size:.92rem} }
   .ios-soon.done{border-style:solid; border-color:rgba(255,255,255,.7); color:#fff; cursor:default}
 
   /* preview / direct APK download (secondary, on dark sections) */
