@@ -171,6 +171,9 @@
   .feature p{margin:0; color:var(--muted); font-size:.95rem}
   @media(max-width:920px){.features{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.features{grid-template-columns:1fr}}
+  .features.trio{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.features.trio{grid-template-columns:1fr}}
+  #new{padding-top:0}
 
   /* privacy strip */
   .privacy{background:linear-gradient(135deg,#eef0fb,#f6f1f8)}
@@ -315,7 +318,7 @@
       <div class="step">
         <div class="n">4</div>
         <h3><span class="t" lang="en">Make it yours</span><span class="t" lang="zh">据为己有</span></h3>
-        <p><span class="t" lang="en">Set it as your home or lock screen, save a copy, or share — in one tap.</span><span class="t" lang="zh">一键设为主屏或锁屏、保存副本，或分享出去。</span></p>
+        <p><span class="t" lang="en">Set it as your home or lock screen or a home-screen widget, save a copy, or share — in one tap.</span><span class="t" lang="zh">一键设为主屏、锁屏或主屏小组件，保存副本，或分享出去。</span></p>
       </div>
     </div>
   </div>
@@ -393,6 +396,33 @@
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
         <h3><span class="t" lang="en">No account needed</span><span class="t" lang="zh">无需账号</span></h3>
         <p><span class="t" lang="en">No account, no sign-in, no ads. Your wallpapers are made right on your phone.</span><span class="t" lang="zh">无账号、无登录、无广告。壁纸就在你的手机上生成。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEW IN 1.2 ================= -->
+<section id="new">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span class="t" lang="en">New in 1.2</span><span class="t" lang="zh">1.2 新功能</span></span>
+      <h2><span class="t" lang="en">Your words, all day long.</span><span class="t" lang="zh">你的话，陪你一整天。</span></h2>
+    </div>
+    <div class="features trio">
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/></svg>
+        <h3><span class="t" lang="en">Home-screen widget</span><span class="t" lang="zh">主屏小组件</span></h3>
+        <p><span class="t" lang="en">Keep your words on your home screen as a widget — tap it to rewrite them anytime.</span><span class="t" lang="zh">把你的文字做成主屏小组件，点一下就能随时改写。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15L6 16Z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>
+        <h3><span class="t" lang="en">A reminder that speaks</span><span class="t" lang="zh">会说话的提醒</span></h3>
+        <p><span class="t" lang="en">Set an alarm and Backdrop reads your words aloud at the time you choose — a daily nudge in your own words.</span><span class="t" lang="zh">设个闹钟，到点时 Backdrop 会把你的文字读出来——用你自己的话，每天提醒自己。</span></p>
+      </div>
+      <div class="feature">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 9h18M8 3v4M16 3v4"/><path d="M15 14.5a3 3 0 1 1-1-2.2M15 12v2.5h-2.5"/></svg>
+        <h3><span class="t" lang="en">Always today's date</span><span class="t" lang="zh">日期每天更新</span></h3>
+        <p><span class="t" lang="en">Date stickers on your wallpaper and widget refresh themselves every day, so they always show today.</span><span class="t" lang="zh">壁纸和小组件上的日期贴纸每天自动更新，永远显示今天。</span></p>
       </div>
     </div>
   </div>
