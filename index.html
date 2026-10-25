@@ -495,29 +495,35 @@
     d.lang=zh?'zh':'en';
     localStorage.setItem('bm_lang', zh?'zh':'en');
   }
-  // "iOS coming soon" interest counter.
   // Paste a Mixpanel project token to enable tracking; empty = UI feedback only, nothing sent.
   var MIXPANEL_TOKEN='3dc724d33ea12b364fc30a57ce4107a5';
-  function iosInterest(btn, placement){
-    if(!btn.classList.contains('done')){
-      btn.classList.add('done');
-      btn.querySelector('.t[lang="en"]').textContent='Noted — thanks for your interest!';
-      btn.querySelector('.t[lang="zh"]').textContent='收到！感谢关注';
-    }
-    if(!MIXPANEL_TOKEN) return;
+  // Sends one event to the Dropback-web project. Skipped for local previews (file://, localhost).
+  function mpTrack(event, props){
+    if(!MIXPANEL_TOKEN || !/^https?:$/.test(location.protocol) || /^(localhost|127\.0\.0\.1)$/.test(location.hostname)) return;
     try{
       var id=localStorage.getItem('bm_web_id');
       if(!id){
         id=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Math.random()).slice(2)+Date.now();
         localStorage.setItem('bm_web_id',id);
       }
-      var payload={event:'web_ios_interest',properties:{
-        token:MIXPANEL_TOKEN, distinct_id:id, placement:placement,
-        lang:document.documentElement.lang, $current_url:location.href}};
-      fetch('https://api.mixpanel.com/track?ip=1&data='+encodeURIComponent(btoa(JSON.stringify(payload))),
+      var p={token:MIXPANEL_TOKEN, distinct_id:id,
+        lang:document.documentElement.lang, $current_url:location.href};
+      for(var k in props) p[k]=props[k];
+      fetch('https://api.mixpanel.com/track?ip=1&data='+encodeURIComponent(btoa(JSON.stringify({event:event,properties:p}))),
             {method:'GET', mode:'no-cors', keepalive:true});
     }catch(e){}
   }
+  // "iOS coming soon" interest counter.
+  function iosInterest(btn, placement){
+    if(!btn.classList.contains('done')){
+      btn.classList.add('done');
+      btn.querySelector('.t[lang="en"]').textContent='Noted — thanks for your interest!';
+      btn.querySelector('.t[lang="zh"]').textContent='收到！感谢关注';
+    }
+    mpTrack('web_ios_interest', {placement:placement});
+  }
+  // One page view per load. $referrer is where the visitor came from (empty when typed/bookmarked).
+  mpTrack('web_page_viewed', {$referrer:document.referrer||'$direct', page:location.pathname});
   // nav turns solid on scroll
   var nav=document.getElementById('nav');
   function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>30); }
